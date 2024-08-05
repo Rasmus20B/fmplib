@@ -4,7 +4,7 @@ use std::path::Path;
 use std::collections::{BTreeMap, HashMap};
 
 use crate::repr::component;
-use crate::script_engine::script_engine_instructions::{ScriptStep, INSTRUCTIONMAP, Instruction};
+use crate::script_engine::instructions::{ScriptStep, INSTRUCTIONMAP, Instruction};
 use crate::decompile::decompiler;
 use crate::repr::file::FmpFile;
 use crate::fmp_format::{sector, chunk::{get_chunk_from_code, ChunkType}, metadata_constants};
@@ -15,10 +15,7 @@ const SECTOR_SIZE : usize = 4096;
 
 
 fn decompile_calculation(bytecode: &[u8]) -> String {
-
-
     println!("Bytecode we sedn: {:x?}",  bytecode);
-
     let mut it = bytecode.iter().peekable();
     let mut result = String::new();
 

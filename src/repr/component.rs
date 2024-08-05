@@ -1,7 +1,7 @@
 
 use std::collections::HashMap;
 use serde::{Deserialize, Serialize};
-use crate::script_engine::script_engine_instructions::ScriptStep;
+use crate::script_engine::instructions::ScriptStep;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum FMComponentType {

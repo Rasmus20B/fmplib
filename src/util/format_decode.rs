@@ -27,7 +27,7 @@ pub fn fm_string_decrypt(bytes: &[u8]) -> String {
 }
 #[cfg(test)]
 mod tests {
-    use crate::encoding_util::*;
+    use crate::util::format_decode::*;
     #[test]
     fn int_testing() {
         assert_eq!(get_path_int(&[128, 138]), 266);

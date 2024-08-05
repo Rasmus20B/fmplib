@@ -1,1 +1,1 @@
-pub mod script_engine_instructions;
+pub mod instructions;
